@@ -13,6 +13,14 @@
 		23D10C2719BDF342001F060E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23D10C2519BDF342001F060E /* Main.storyboard */; };
 		23D10C2919BDF342001F060E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23D10C2819BDF342001F060E /* Images.xcassets */; };
 		23D10C3519BDF342001F060E /* MeetMeUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D10C3419BDF342001F060E /* MeetMeUpTests.m */; };
+		23D10C4019BDFF1C001F060E /* EventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D10C3F19BDFF1C001F060E /* EventDetailViewController.m */; };
+		23D10C4319BE002C001F060E /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D10C4219BE002C001F060E /* Event.m */; };
+		23D10C4619BE04DA001F060E /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D10C4519BE04DA001F060E /* WebViewController.m */; };
+		23D10C4919BE0D7D001F060E /* CommentsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D10C4819BE0D7D001F060E /* CommentsTableViewController.m */; };
+		23D10C4C19BE0DF5001F060E /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D10C4B19BE0DF5001F060E /* Comment.m */; };
+		23D10C4F19BE112A001F060E /* CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D10C4E19BE112A001F060E /* CommentTableViewCell.m */; };
+		23D10C5219BE33B9001F060E /* Member.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D10C5119BE33B9001F060E /* Member.m */; };
+		23D10C5819BE5E51001F060E /* MemberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D10C5719BE5E51001F060E /* MemberViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +46,22 @@
 		23D10C2E19BDF342001F060E /* MeetMeUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeetMeUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23D10C3319BDF342001F060E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23D10C3419BDF342001F060E /* MeetMeUpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeetMeUpTests.m; sourceTree = "<group>"; };
+		23D10C3E19BDFF1C001F060E /* EventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailViewController.h; sourceTree = "<group>"; };
+		23D10C3F19BDFF1C001F060E /* EventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailViewController.m; sourceTree = "<group>"; };
+		23D10C4119BE002C001F060E /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		23D10C4219BE002C001F060E /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		23D10C4419BE04DA001F060E /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		23D10C4519BE04DA001F060E /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		23D10C4719BE0D7D001F060E /* CommentsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentsTableViewController.h; sourceTree = "<group>"; };
+		23D10C4819BE0D7D001F060E /* CommentsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentsTableViewController.m; sourceTree = "<group>"; };
+		23D10C4A19BE0DF5001F060E /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		23D10C4B19BE0DF5001F060E /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		23D10C4D19BE112A001F060E /* CommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentTableViewCell.h; sourceTree = "<group>"; };
+		23D10C4E19BE112A001F060E /* CommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentTableViewCell.m; sourceTree = "<group>"; };
+		23D10C5019BE33B9001F060E /* Member.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Member.h; sourceTree = "<group>"; };
+		23D10C5119BE33B9001F060E /* Member.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Member.m; sourceTree = "<group>"; };
+		23D10C5619BE5E51001F060E /* MemberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberViewController.h; sourceTree = "<group>"; };
+		23D10C5719BE5E51001F060E /* MemberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +82,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23C1468419EDD38900D565E1 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				23D10C5019BE33B9001F060E /* Member.h */,
+				23D10C5119BE33B9001F060E /* Member.m */,
+				23D10C4119BE002C001F060E /* Event.h */,
+				23D10C4219BE002C001F060E /* Event.m */,
+				23D10C4A19BE0DF5001F060E /* Comment.h */,
+				23D10C4B19BE0DF5001F060E /* Comment.m */,
+			);
+			name = "Data Model";
+			sourceTree = "<group>";
+		};
 		23D10C0F19BDF342001F060E = {
 			isa = PBXGroup;
 			children = (
@@ -83,7 +120,18 @@
 				23D10C2019BDF342001F060E /* AppDelegate.m */,
 				23D10C2219BDF342001F060E /* ViewController.h */,
 				23D10C2319BDF342001F060E /* ViewController.m */,
+				23D10C3E19BDFF1C001F060E /* EventDetailViewController.h */,
+				23D10C3F19BDFF1C001F060E /* EventDetailViewController.m */,
 				23D10C2519BDF342001F060E /* Main.storyboard */,
+				23D10C5619BE5E51001F060E /* MemberViewController.h */,
+				23D10C5719BE5E51001F060E /* MemberViewController.m */,
+				23D10C4719BE0D7D001F060E /* CommentsTableViewController.h */,
+				23D10C4819BE0D7D001F060E /* CommentsTableViewController.m */,
+				23D10C4D19BE112A001F060E /* CommentTableViewCell.h */,
+				23D10C4E19BE112A001F060E /* CommentTableViewCell.m */,
+				23D10C4419BE04DA001F060E /* WebViewController.h */,
+				23D10C4519BE04DA001F060E /* WebViewController.m */,
+				23C1468419EDD38900D565E1 /* Data Model */,
 				23D10C2819BDF342001F060E /* Images.xcassets */,
 				23D10C1B19BDF342001F060E /* Supporting Files */,
 			);
@@ -216,8 +264,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				23D10C2419BDF342001F060E /* ViewController.m in Sources */,
+				23D10C4F19BE112A001F060E /* CommentTableViewCell.m in Sources */,
+				23D10C4619BE04DA001F060E /* WebViewController.m in Sources */,
 				23D10C2119BDF342001F060E /* AppDelegate.m in Sources */,
+				23D10C4319BE002C001F060E /* Event.m in Sources */,
+				23D10C4919BE0D7D001F060E /* CommentsTableViewController.m in Sources */,
+				23D10C4019BDFF1C001F060E /* EventDetailViewController.m in Sources */,
 				23D10C1E19BDF342001F060E /* main.m in Sources */,
+				23D10C4C19BE0DF5001F060E /* Comment.m in Sources */,
+				23D10C5819BE5E51001F060E /* MemberViewController.m in Sources */,
+				23D10C5219BE33B9001F060E /* Member.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +458,7 @@
 				23D10C3A19BDF342001F060E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		23D10C3B19BDF342001F060E /* Build configuration list for PBXNativeTarget "MeetMeUpTests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +467,7 @@
 				23D10C3D19BDF342001F060E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
