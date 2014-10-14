@@ -23,6 +23,5 @@
 
 + (NSArray *)eventsFromArray:(NSArray *)incomingArray;
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
-- (void)getCommentsWithBlock:(void(^)(NSArray *comments))commentBlock;
 
 @end

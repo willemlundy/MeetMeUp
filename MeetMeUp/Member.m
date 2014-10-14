@@ -26,29 +26,5 @@
     return self;
 }
 
-+ (void)memberFromMemberID:(NSString *)memberID withBlock:(void (^)(Member *member))memberBlock
-{
-    
-    //https://api.meetup.com/2/member/32119832?&sign=true&photo-host=public&page=20
-
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.meetup.com/2/member/%@?&sign=true&photo-host=public&page=20&key=4b6a576833454113112e241936657e47",memberID]];
-    
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    
-    [NSURLConnection sendAsynchronousRequest:request
-                                       queue:[NSOperationQueue mainQueue]
-                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-                               
-                               
-                               NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
-                               
-
-                               
-                               
-                               
-                               
-                               memberBlock([[Member alloc]initWithDictionary:dict]);
-                           }];
-}
 
 @end

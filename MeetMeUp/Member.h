@@ -18,8 +18,7 @@
 @property (nonatomic, strong) NSURL *photoURL;
 
 
-+ (void)memberFromMemberID:(NSString *)memberID withBlock:(void(^)(Member *member))memberBlock;
-
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 
 @end

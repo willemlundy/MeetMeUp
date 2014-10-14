@@ -42,28 +42,5 @@
     return newArray;
 }
 
-- (void)getCommentsWithBlock:(void (^)(NSArray *))commentBlock
-{
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.meetup.com/2/event_comments?&sign=true&photo-host=public&event_id=%@&page=20&key=4b6a576833454113112e241936657e47",self.eventID]];
-    
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    
-    [NSURLConnection sendAsynchronousRequest:request
-                                       queue:[NSOperationQueue mainQueue]
-                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-                               
-                               
-                               NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
-                               
-                               NSArray *jsonArray = [dict objectForKey:@"results"];
-                               
-                               
-
-                               
-                               commentBlock([Comment objectsFromArray:jsonArray]);
-                           }];
-
-    
-}
 
 @end
