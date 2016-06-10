@@ -29,22 +29,12 @@
 
 - (void)performSearchWithKeyword:(NSString *)keyword
 {
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.meetup.com/2/open_events.json?zip=60604&text=%@&time=,1w&key=4b6a576833454113112e241936657e47",keyword]];
+
+    [Event performSearchForKeyword:keyword andCompletion:^(NSArray *searchResult) {
+        self.dataArray = searchResult;
+        [self.tableView reloadData];
+    }];
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    
-    [NSURLConnection sendAsynchronousRequest:request
-                                       queue:[NSOperationQueue mainQueue]
-                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-                               
-                               NSArray *jsonArray = [[NSJSONSerialization JSONObjectWithData:data
-                                                                                     options:NSJSONReadingAllowFragments
-                                                                                       error:nil] objectForKey:@"results"];
-                               
-                               
-                               self.dataArray = [Event eventsFromArray:jsonArray];
-                               [self.tableView reloadData];
-                           }];
 
 }
 
@@ -59,26 +49,26 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"eventCell"];
     
-    Event *e = self.dataArray[indexPath.row];
+    Event *event = self.dataArray[indexPath.row];
     
-    cell.textLabel.text = e.name;
-    cell.detailTextLabel.text = e.address;
-    if (e.photoURL)
+    cell.textLabel.text = event.name;
+    cell.detailTextLabel.text = event.address;
+    if (event.photoURL)
     {
-        NSURLRequest *imageReq = [NSURLRequest requestWithURL:e.photoURL];
-        
-        [NSURLConnection sendAsynchronousRequest:imageReq queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-           dispatch_async(dispatch_get_main_queue(), ^{
-               if (!connectionError) {
-                   [cell.imageView setImage:[UIImage imageWithData:data]];
-                   [cell layoutSubviews];
-               }
-           });
-
-
+        [event getImageForEvent:^(UIImage *eventImage) {
+            cell.imageView.image = eventImage;
+            [cell layoutSubviews];
         }];
         
         
+        
+//        NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:event.photoURL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                cell.imageView.image = [UIImage imageWithData:data];
+//                [cell layoutSubviews];
+//            });
+//        }];
+//        [task resume];
     }else
     {
        [cell.imageView setImage:[UIImage imageNamed:@"logo"]];
@@ -92,8 +82,8 @@
 {
     EventDetailViewController *detailVC = [segue destinationViewController];
 
-    Event *e = self.dataArray[self.tableView.indexPathForSelectedRow.row];
-    detailVC.event = e;
+    Event *event = self.dataArray[self.tableView.indexPathForSelectedRow.row];
+    detailVC.event = event;
 }
 
 #pragma searchbar delegate

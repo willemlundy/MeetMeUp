@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface Member : NSObject
 
@@ -19,6 +20,7 @@
 
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
-
++ (void)findMemberForMemberID:(NSString *)memberID andCompletion:(void (^)(Member *member))complete;
+- (void)getImageForMember:(void(^)(UIImage *memberImage))complete;
 
 @end

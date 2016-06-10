@@ -21,6 +21,7 @@
 		23D10C4F19BE112A001F060E /* CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D10C4E19BE112A001F060E /* CommentTableViewCell.m */; };
 		23D10C5219BE33B9001F060E /* Member.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D10C5119BE33B9001F060E /* Member.m */; };
 		23D10C5819BE5E51001F060E /* MemberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D10C5719BE5E51001F060E /* MemberViewController.m */; };
+		98340E2B1BB4A48F00BA4777 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98340E2A1BB4A48F00BA4777 /* Launch Screen.storyboard */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		23D10C5119BE33B9001F060E /* Member.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Member.m; sourceTree = "<group>"; };
 		23D10C5619BE5E51001F060E /* MemberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberViewController.h; sourceTree = "<group>"; };
 		23D10C5719BE5E51001F060E /* MemberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberViewController.m; sourceTree = "<group>"; };
+		98340E2A1BB4A48F00BA4777 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				23D10C3E19BDFF1C001F060E /* EventDetailViewController.h */,
 				23D10C3F19BDFF1C001F060E /* EventDetailViewController.m */,
 				23D10C2519BDF342001F060E /* Main.storyboard */,
+				98340E2A1BB4A48F00BA4777 /* Launch Screen.storyboard */,
 				23D10C5619BE5E51001F060E /* MemberViewController.h */,
 				23D10C5719BE5E51001F060E /* MemberViewController.m */,
 				23D10C4719BE0D7D001F060E /* CommentsTableViewController.h */,
@@ -208,7 +211,7 @@
 		23D10C1019BDF342001F060E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Mobile Makers";
 				TargetAttributes = {
 					23D10C1719BDF342001F060E = {
@@ -244,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98340E2B1BB4A48F00BA4777 /* Launch Screen.storyboard in Resources */,
 				23D10C2719BDF342001F060E /* Main.storyboard in Resources */,
 				23D10C2919BDF342001F060E /* Images.xcassets in Resources */,
 			);
@@ -327,6 +331,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -341,7 +346,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -376,7 +381,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -390,6 +395,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = MeetMeUp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mobilemakers.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -401,6 +407,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = MeetMeUp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mobilemakers.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -419,6 +426,7 @@
 				);
 				INFOPLIST_FILE = MeetMeUpTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mobilemakers.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MeetMeUp.app/MeetMeUp";
 			};
@@ -434,6 +442,7 @@
 				);
 				INFOPLIST_FILE = MeetMeUpTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mobilemakers.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MeetMeUp.app/MeetMeUp";
 			};
